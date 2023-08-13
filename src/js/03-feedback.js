@@ -16,7 +16,8 @@ function submitting(evt) {
     evt.preventDefault();
     console.log({email: email.value,
         message: message.value
-    }); form.reset();
+    });
+    form.reset();
     localStorage.removeItem(key);
 };
 if (localStorage.getItem(key)) {
