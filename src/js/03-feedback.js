@@ -19,8 +19,8 @@ function submitting(evt) {
     }); form.reset();
     localStorage.removeItem(key);
 };
-if (localStorage.getItem(LOCALSTORAGE_KEY)) {
-  updateForm(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
+if (localStorage.getItem(key)) {
+    updateForm(JSON.parse(localStorage.getItem(key)));
 }
 
 function updateForm({ email: lsEmail, message: lsMessage }) {
