@@ -19,3 +19,11 @@ function submitting(evt) {
     }); form.reset();
     localStorage.removeItem(key);
 };
+if (localStorage.getItem(LOCALSTORAGE_KEY)) {
+  updateForm(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
+}
+
+function updateForm({ email: lsEmail, message: lsMessage }) {
+  email.value = lsEmail;
+  message.value = lsMessage;
+}
